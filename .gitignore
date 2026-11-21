@@ -1,3 +1,15 @@
+# Source code (distributed via compiled GitHub Releases)
+*.py
+*.pyw
+index.html
+languages.json
+cult_preset.json
+cult_media/
+v2/
+requirements.txt
+GEMINI.md
+.github/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
