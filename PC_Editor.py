@@ -1389,16 +1389,16 @@ async def linux_notification_listener_loop():
 
             now = time.time()
             detected_app = None
-            if "telegram" in line:
+            if "telegram" in line and APP_CONFIG.get("notify_telegram"):
                 detected_app = "telegram"
-            elif "discord" in line:
+            elif "discord" in line and APP_CONFIG.get("notify_discord"):
                 detected_app = "discord"
-            elif "steam" in line:
+            elif "steam" in line and APP_CONFIG.get("notify_steam"):
                 detected_app = "steam"
 
             if detected_app and (now - last_trigger[detected_app] > 5.0):
                 last_trigger[detected_app] = now
-                msg = json.dumps({"action": "notification", "app": detected_app})
+                msg = json.dumps({"action": "notify", "app": detected_app})
                 if authenticated_phones:
                     await asyncio.gather(
                         *(phone.send(msg) for phone in list(authenticated_phones)),
