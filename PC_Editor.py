@@ -59,7 +59,7 @@ def get_resource_path(relative_path):
 
 # Распаковываем index.html и ресурсы из .exe рядом с программой для HTTP-сервера и кастомизации
 if getattr(sys, 'frozen', False):
-    for fname in ["index.html", "cult_altar.ico", "languages.json"]:
+    for fname in ["index.html", "cult_altar.ico", "languages.json", "cult_preset.json"]:
         bundled_f = os.path.join(RESOURCE_DIR, fname)
         local_f = os.path.join(BASE_DIR, fname)
         if os.path.exists(bundled_f) and not os.path.exists(local_f):
