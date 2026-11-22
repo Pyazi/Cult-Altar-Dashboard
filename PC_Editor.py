@@ -762,7 +762,7 @@ class QRCodeDialog(QDialog):
         qr_container.setFixedSize(220, 220)
         qr_container.setStyleSheet("background-color: #ffffff; border: 2px solid #e6b800; border-radius: 6px; padding: 6px;")
 
-        full_url = f"http://{ip}:8080/?pin={pin}"
+        full_url = f"http://{ip}:8888/?pin={pin}"
         try:
             qr = qrcode.QRCode(
                 version=1,
@@ -789,7 +789,7 @@ class QRCodeDialog(QDialog):
         ib_layout = QVBoxLayout(info_box)
         ib_layout.setSpacing(6)
 
-        self.url_label = QLabel(f"http://{ip}:8080")
+        self.url_label = QLabel(f"http://{ip}:8888")
         self.url_label.setStyleSheet("font-size: 13px; color: #66d9ff; font-weight: bold;")
         ib_layout.addWidget(self.url_label)
 
@@ -1557,7 +1557,7 @@ async def run_server():
         asyncio.create_task(notification_listener_loop())
     elif IS_LINUX:
         asyncio.create_task(linux_notification_listener_loop())
-    async with websockets.serve(ws_handler, "0.0.0.0", 8765):
+    async with websockets.serve(ws_handler, "0.0.0.0", 8765, reuse_address=True):
         await asyncio.Future()
 
 def start_ws_server():
@@ -1599,9 +1599,10 @@ class NoCacheHTTPRequestHandler(SimpleHTTPRequestHandler):
 
 def start_http_server():
     try:
-        server_address = ('0.0.0.0', 8080)
+        ThreadingHTTPServer.allow_reuse_address = True
+        server_address = ('0.0.0.0', 8888)
         httpd = ThreadingHTTPServer(server_address, NoCacheHTTPRequestHandler)
-        print("🌍 Веб-интерфейс доступен на порту 8080")
+        print("🌍 Веб-интерфейс доступен на порту 8888")
         httpd.serve_forever()
     except Exception as e:
         print(f"Ошибка веб-сервера: {e}")
@@ -2124,7 +2125,7 @@ class DashboardEditor(QMainWindow):
         self.pin_label = QLabel(f"🔑 PIN: {APP_CONFIG['pin']}")
         self.pin_label.setStyleSheet("color: #e6b800; font-size: 14px; font-weight: bold; padding: 4px 8px; border: 1px dashed #8a1c1c;")
         
-        self.ip_btn = QPushButton(f"🌐 {self.current_ip}:8080")
+        self.ip_btn = QPushButton(f"🌐 {self.current_ip}:8888")
         self.ip_btn.setStyleSheet("""
             QPushButton {
                 background-color: #12202b; color: #66d9ff; border: 1px solid #1c5270;
@@ -2738,10 +2739,10 @@ class DashboardEditor(QMainWindow):
 
     def update_ip_button(self):
         if hasattr(self, 'ip_btn'):
-            self.ip_btn.setText(f"🌐 {self.current_ip}:8080")
+            self.ip_btn.setText(f"🌐 {self.current_ip}:8888")
 
     def copy_ip_link(self):
-        url = f"http://{self.current_ip}:8080"
+        url = f"http://{self.current_ip}:8888"
         QApplication.clipboard().setText(url)
         self.ip_btn.setText(tr("btn_copied"))
         QTimer.singleShot(1500, self.update_ip_button)
@@ -3134,13 +3135,13 @@ class AppManager:
         if self.info_action:
             ip = get_current_ip()
             pin = APP_CONFIG.get("pin", "")
-            self.info_action.setText(f"🌐 {ip}:8080 | PIN: {pin}")
+            self.info_action.setText(f"🌐 {ip}:8888 | PIN: {pin}")
 
     def update_tray_tooltip(self):
         if self.tray_icon:
             ip = get_current_ip()
             pin = APP_CONFIG.get("pin", "")
-            self.tray_icon.setToolTip(f"{tr('app_title')}\nhttp://{ip}:8080 | PIN: {pin}")
+            self.tray_icon.setToolTip(f"{tr('app_title')}\nhttp://{ip}:8888 | PIN: {pin}")
 
     def on_tray_activated(self, reason):
         if reason == QSystemTrayIcon.ActivationReason.Trigger:  # Левый клик по иконке трея

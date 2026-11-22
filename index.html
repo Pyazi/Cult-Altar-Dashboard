@@ -1173,7 +1173,7 @@
                 if (w.h) card.style.height = w.h + 'px';
                 
                 var img = document.createElement('img');
-                img.src = "http://" + currentPcIp + ":8080/cult_media/" + encodeURIComponent(w.file) + "?t=" + Date.now();
+                img.src = "http://" + currentPcIp + ":8888/cult_media/" + encodeURIComponent(w.file) + "?t=" + Date.now();
                 card.appendChild(img);
                 dashboard.appendChild(card);
             }
