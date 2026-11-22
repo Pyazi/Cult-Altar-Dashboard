@@ -449,6 +449,178 @@
             85%  { opacity: 0.85; transform: scale(1.0) translateZ(0); }
             100% { opacity: 0; transform: scale(0.8) translateZ(0); }
         }
+
+        /* --- СТИЛИ ДЛЯ ТЕМЫ STARDEW VALLEY --- */
+        body.theme-stardew {
+            background-color: #26190e;
+            color: #f7ebd2;
+            font-family: Georgia, "Times New Roman", serif;
+        }
+        body.theme-stardew #setup {
+            background: radial-gradient(circle, #3d2716 0%, #1c120a 100%);
+        }
+        body.theme-stardew #setup h2 {
+            color: #ffd966;
+            text-shadow: 0 2px 6px rgba(255, 217, 102, 0.4);
+        }
+        body.theme-stardew #detected-host {
+            background-color: #332014;
+            border-color: #8c5826;
+            color: #ffd966;
+        }
+        body.theme-stardew #pin-code {
+            background-color: #f3e5c2;
+            border-color: #8c5826;
+            color: #3e2410;
+        }
+        body.theme-stardew button.main-btn {
+            background-color: #8c5826;
+            border-color: #ffd966;
+            color: #f7ebd2;
+        }
+        body.theme-stardew .secondary-btn {
+            background-color: #3d281a !important;
+            border-color: #8c5826 !important;
+            color: #dfc8a8 !important;
+        }
+        body.theme-stardew #sleep-screen {
+            background: radial-gradient(circle, #382516 0%, #170f08 100%);
+        }
+        body.theme-stardew .crown-core { color: #ffd966; }
+        body.theme-stardew .ritual-ring {
+            border-color: #8c5826;
+            box-shadow: 0 0 18px rgba(140, 88, 38, 0.4);
+        }
+        body.theme-stardew #dashboard {
+            background-color: #2b1c12;
+            background-image: 
+                radial-gradient(circle at center, transparent 40%, #170f08 100%),
+                radial-gradient(#4d3221 1px, transparent 1px);
+        }
+        body.theme-stardew .cult-card {
+            background-color: #f3e5c2;
+            border: 2px solid #8c5826;
+            color: #3e2410;
+            box-shadow: 
+                inset 0 0 0 2px #d8c49d,
+                0 3px 6px rgba(0, 0, 0, 0.4);
+        }
+        body.theme-stardew .cult-card::before, body.theme-stardew .cult-card::after {
+            color: #8c5826;
+        }
+        body.theme-stardew .card-header {
+            color: #5a3418;
+            font-weight: bold;
+        }
+        body.theme-stardew .card-value {
+            color: #3e2410;
+            font-weight: bold;
+        }
+        body.theme-stardew .bar-track {
+            background-color: #d8c49d;
+            border-color: #8c5826;
+        }
+        body.theme-stardew .card-launcher {
+            background-color: #e6d3a5;
+            border: 2px solid #b87333;
+        }
+        body.theme-stardew .card-launcher:active {
+            background-color: #c9b483;
+        }
+        body.theme-stardew .card-spotify {
+            background-color: #e8dbb7;
+            border-color: #2e7d32;
+        }
+        body.theme-stardew .card-spotify .card-header { color: #2e7d32; }
+        body.theme-stardew .spotify-track { color: #3e2410; }
+        body.theme-stardew .spotify-btn, body.theme-stardew .vol-btn {
+            background-color: #d8c49d;
+            border-color: #8c5826;
+            color: #3e2410;
+        }
+
+        /* --- СТИЛИ ДЛЯ ТЕМЫ TWILIGHT (MODERN DARK) --- */
+        body.theme-twilight {
+            background-color: #191722;
+            color: #e6e4f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body.theme-twilight #setup {
+            background: radial-gradient(circle, #272238 0%, #13111c 100%);
+        }
+        body.theme-twilight #setup h2 {
+            color: #9b72f3;
+            text-shadow: 0 2px 8px rgba(155, 114, 243, 0.4);
+        }
+        body.theme-twilight #detected-host {
+            background-color: #23202e;
+            border-color: #3b354d;
+            color: #9b72f3;
+        }
+        body.theme-twilight #pin-code {
+            background-color: #23202e;
+            border-color: #9b72f3;
+            color: #9b72f3;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body.theme-twilight button.main-btn {
+            background-color: #2e2a3d;
+            border-color: #9b72f3;
+            color: #e6e4f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body.theme-twilight .secondary-btn {
+            background-color: #201d2b !important;
+            border-color: #3b354d !important;
+            color: #a5a1b8 !important;
+        }
+        body.theme-twilight #sleep-screen {
+            background: radial-gradient(circle, #231f33 0%, #0e0d14 100%);
+        }
+        body.theme-twilight .crown-core { color: #9b72f3; }
+        body.theme-twilight .ritual-ring {
+            border-color: #9b72f3;
+            box-shadow: 0 0 18px rgba(155, 114, 243, 0.35);
+        }
+        body.theme-twilight #dashboard {
+            background-color: #15131c;
+            background-image: 
+                radial-gradient(circle at center, transparent 40%, #0d0c12 100%),
+                radial-gradient(#2d283d 1px, transparent 1px);
+        }
+        body.theme-twilight .cult-card {
+            background-color: #23202e;
+            border: 2px solid #3b354d;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        body.theme-twilight .cult-card::before, body.theme-twilight .cult-card::after {
+            display: none;
+        }
+        body.theme-twilight .card-header {
+            color: #a5a1b8;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body.theme-twilight .card-value {
+            color: #e6e4f0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        body.theme-twilight .card-cpu { border-color: #f45b84; }
+        body.theme-twilight .card-cpu .card-header { color: #f45b84; }
+        body.theme-twilight .card-ram { border-color: #9b72f3; }
+        body.theme-twilight .card-ram .card-header { color: #9b72f3; }
+        body.theme-twilight .card-disk { border-color: #5299f0; }
+        body.theme-twilight .card-disk .card-header { color: #5299f0; }
+        body.theme-twilight .fill-cpu { background: #f45b84; }
+        body.theme-twilight .fill-ram { background: #9b72f3; }
+        body.theme-twilight .fill-disk { background: #5299f0; }
+        body.theme-twilight .card-launcher {
+            background-color: #2a2538;
+            border-color: #f45b84;
+        }
+        body.theme-twilight .card-launcher:active {
+            background-color: #3d3254;
+        }
     </style>
 </head>
 <body>
@@ -493,6 +665,73 @@
     var notifyHideTimer = null;
     var notifyBadgeSide = 90;
 
+    var currentTheme = "cult";
+    var currentThemeTitles = null;
+    var currentTranslations = null;
+
+    function applyTheme(theme) {
+        if (!theme) theme = 'cult';
+        currentTheme = theme;
+        document.body.className = 'theme-' + theme;
+
+        var root = document.documentElement;
+        if (theme === 'stardew') {
+            root.style.setProperty('--body-bg', '#26190e');
+            root.style.setProperty('--card-bg', '#f3e5c2');
+            root.style.setProperty('--card-text', '#3e2410');
+            root.style.setProperty('--card-border', '#8c5826');
+            root.style.setProperty('--card-header', '#5a3418');
+        } else if (theme === 'twilight') {
+            root.style.setProperty('--body-bg', '#191722');
+            root.style.setProperty('--card-bg', '#23202e');
+            root.style.setProperty('--card-text', '#e6e4f0');
+            root.style.setProperty('--card-border', '#3b354d');
+            root.style.setProperty('--card-header', '#9b72f3');
+        } else {
+            root.style.setProperty('--body-bg', '#0b090b');
+            root.style.setProperty('--card-bg', '#1c171c');
+            root.style.setProperty('--card-text', '#f2ebd9');
+            root.style.setProperty('--card-border', '#8a1c1c');
+            root.style.setProperty('--card-header', '#e6b800');
+        }
+    }
+
+    function updateWidgetTitles(themeTitles) {
+        if (!themeTitles) return;
+        var headers = document.querySelectorAll('.card-header[data-wtype]');
+        for (var i = 0; i < headers.length; i++) {
+            var el = headers[i];
+            var type = el.getAttribute('data-wtype');
+            if (themeTitles[type]) {
+                el.innerText = themeTitles[type];
+            }
+        }
+    }
+
+    function applyTranslations(trans, themeTitles) {
+        if (trans) {
+            currentTranslations = trans;
+            var h2 = document.querySelector('#setup h2');
+            if (h2 && trans.setup_title) h2.innerText = trans.setup_title;
+            var p = document.querySelector('#setup p');
+            if (p && trans.enter_pin) p.innerText = trans.enter_pin;
+            var connBtn = document.querySelector('#setup button.main-btn');
+            if (connBtn && trans.btn_connect) connBtn.innerText = trans.btn_connect;
+            var fsBtn = document.getElementById('fs-btn');
+            if (fsBtn && trans.btn_fs) fsBtn.innerText = trans.btn_fs;
+            var st = document.querySelector('.sleep-title');
+            if (st && trans.sleep_title) st.innerText = trans.sleep_title;
+            var ss = document.querySelector('.sleep-sub');
+            if (ss && trans.sleep_sub) ss.innerText = trans.sleep_sub;
+            var hostEl = document.getElementById('detected-host');
+            if (hostEl && trans.server_prefix) hostEl.innerText = trans.server_prefix + currentPcIp;
+        }
+        if (themeTitles) {
+            currentThemeTitles = themeTitles;
+            updateWidgetTitles(themeTitles);
+        }
+    }
+
     var domCache = {
         cpuVals: [], cpuBars: [],
         ramVals: [], ramBars: [],
@@ -528,12 +767,33 @@
     window.onload = function() {
         document.getElementById('detected-host').innerText = "Сервер: " + currentPcIp;
 
+        var urlPin = null;
         try {
-            var savedPin = localStorage.getItem('cult_pc_pin');
-            if (savedPin) {
-                document.getElementById('pin-code').value = savedPin;
+            var search = window.location.search;
+            if (search) {
+                var pinMatch = search.match(/[?&]pin=([0-9a-zA-Z]{4})/);
+                if (pinMatch && pinMatch[1]) {
+                    urlPin = pinMatch[1];
+                }
             }
         } catch (e) {}
+
+        if (urlPin) {
+            var pinInput = document.getElementById('pin-code');
+            if (pinInput) {
+                pinInput.value = urlPin;
+            }
+            setTimeout(function() {
+                connect();
+            }, 300);
+        } else {
+            try {
+                var savedPin = localStorage.getItem('cult_pc_pin');
+                if (savedPin) {
+                    document.getElementById('pin-code').value = savedPin;
+                }
+            } catch (e) {}
+        }
 
         // Разрешаем отправку по клавише Enter / Готово на клавиатуре телефона
         document.getElementById('pin-code').addEventListener('keyup', function(e) {
@@ -671,6 +931,9 @@
                         localStorage.setItem('cult_pc_pin', pin);
                     } catch (e) {}
 
+                    if (data.theme) applyTheme(data.theme);
+                    if (data.translations) applyTranslations(data.translations, data.theme_titles);
+
                     document.getElementById('setup').style.display = 'none';
                     document.getElementById('sleep-screen').style.display = 'none';
                     document.getElementById('dashboard-wrapper').style.display = 'block';
@@ -682,9 +945,23 @@
                     document.getElementById('dashboard-wrapper').style.display = 'none';
                     document.getElementById('setup').style.display = 'block';
                     statusDiv.style.color = "#ff5555";
-                    statusDiv.innerText = "Неверный PIN-код! Доступ отвергнут.";
+                    var failMsg = (currentTranslations && currentTranslations.bad_pin) ? currentTranslations.bad_pin : "Неверный PIN-код! Доступ отвергнут.";
+                    statusDiv.innerText = failMsg;
+                }
+                else if (data.action === "set_theme") {
+                    if (data.theme) applyTheme(data.theme);
+                    if (data.theme_titles) {
+                        currentThemeTitles = data.theme_titles;
+                        updateWidgetTitles(data.theme_titles);
+                    }
+                }
+                else if (data.action === "set_language") {
+                    if (data.theme) applyTheme(data.theme);
+                    if (data.translations) applyTranslations(data.translations, data.theme_titles);
                 }
                 else if (data.action === "update_layout") {
+                    if (data.theme) applyTheme(data.theme);
+                    if (data.theme_titles) currentThemeTitles = data.theme_titles;
                     if (data.screen_w) canvasW = data.screen_w;
                     if (data.screen_h) canvasH = data.screen_h;
                     fitCanvasToScreen();
@@ -772,6 +1049,23 @@
         var anchorData = null;
         var clockElements = [];
 
+        var defaultHeaders = {
+            clock: "♛ ВРЕМЯ РИТУАЛА",
+            cpu: "🗡 РВЕНИЕ CPU",
+            ram: "👁 ВЕРА RAM",
+            disk: "💎 КАЗНА DISK",
+            uptime: "⏳ ЭПОХА ПК",
+            spotify: "🎵 ПЕСНЬ SPOTIFY",
+            volume: "🔊 ГЛАС СИСТЕМЫ",
+            launcher: "🔮 ПРИЗВАТЬ"
+        };
+        function getHeaderTitle(type) {
+            if (currentThemeTitles && currentThemeTitles[type]) {
+                return currentThemeTitles[type];
+            }
+            return defaultHeaders[type] || "";
+        }
+
         widgets.forEach(function(w) {
             if (w.type === "notify_anchor") {
                 anchorData = w;
@@ -785,7 +1079,7 @@
             if (w.type === "clock") {
                 card.className = 'cult-card card-clock';
                 card.innerHTML = 
-                    '<div class="card-header">♛ ВРЕМЯ РИТУАЛА</div>' +
+                    '<div class="card-header" data-wtype="clock">' + getHeaderTitle("clock") + '</div>' +
                     '<div class="card-value clock-val">--:--:--</div>';
                 applyCardDimensions(card, w);
                 dashboard.appendChild(card);
@@ -794,7 +1088,7 @@
             else if (w.type === "cpu") {
                 card.className = 'cult-card card-cpu';
                 card.innerHTML = 
-                    '<div class="card-header">🗡 РВЕНИЕ CPU</div>' +
+                    '<div class="card-header" data-wtype="cpu">' + getHeaderTitle("cpu") + '</div>' +
                     '<div class="card-value cpu-val">0%</div>' +
                     '<div class="bar-track"><div class="bar-fill fill-cpu cpu-bar"></div></div>';
                 applyCardDimensions(card, w);
@@ -805,7 +1099,7 @@
             else if (w.type === "ram") {
                 card.className = 'cult-card card-ram';
                 card.innerHTML = 
-                    '<div class="card-header">👁 ВЕРА RAM</div>' +
+                    '<div class="card-header" data-wtype="ram">' + getHeaderTitle("ram") + '</div>' +
                     '<div class="card-value ram-val">0%</div>' +
                     '<div class="bar-track"><div class="bar-fill fill-ram ram-bar"></div></div>';
                 applyCardDimensions(card, w);
@@ -816,7 +1110,7 @@
             else if (w.type === "disk") {
                 card.className = 'cult-card card-disk';
                 card.innerHTML = 
-                    '<div class="card-header">💎 КАЗНА DISK</div>' +
+                    '<div class="card-header" data-wtype="disk">' + getHeaderTitle("disk") + '</div>' +
                     '<div class="card-value disk-val">0%</div>' +
                     '<div class="bar-track"><div class="bar-fill fill-disk disk-bar"></div></div>';
                 applyCardDimensions(card, w);
@@ -827,7 +1121,7 @@
             else if (w.type === "uptime") {
                 card.className = 'cult-card card-uptime';
                 card.innerHTML = 
-                    '<div class="card-header">⏳ ЭПОХА ПК</div>' +
+                    '<div class="card-header" data-wtype="uptime">' + getHeaderTitle("uptime") + '</div>' +
                     '<div class="card-value uptime-val">--</div>';
                 applyCardDimensions(card, w);
                 dashboard.appendChild(card);
@@ -836,7 +1130,7 @@
             else if (w.type === "spotify") {
                 card.className = 'cult-card card-spotify';
                 card.innerHTML = 
-                    '<div class="card-header">🎵 ПЕСНЬ SPOTIFY</div>' +
+                    '<div class="card-header" data-wtype="spotify">' + getHeaderTitle("spotify") + '</div>' +
                     '<div class="spotify-track spotify-val">Ожидание...</div>' +
                     '<div class="media-row">' +
                         '<div class="mini-btn spotify-btn" onclick="sendMedia(\'prev\')">⏮</div>' +
@@ -850,7 +1144,7 @@
             else if (w.type === "volume") {
                 card.className = 'cult-card card-volume';
                 card.innerHTML = 
-                    '<div class="card-header">🔊 ГЛАС СИСТЕМЫ</div>' +
+                    '<div class="card-header" data-wtype="volume">' + getHeaderTitle("volume") + '</div>' +
                     '<div class="media-row">' +
                         '<div class="mini-btn vol-btn" onclick="sendMedia(\'vol_down\')">🔉 -</div>' +
                         '<div class="mini-btn vol-btn" onclick="sendMedia(\'vol_mute\')">🔇</div>' +
@@ -862,7 +1156,7 @@
             else if (w.type === "launcher") {
                 card.className = 'cult-card card-launcher';
                 card.innerHTML = 
-                    '<div class="card-header">🔮 ПРИЗВАТЬ</div>' +
+                    '<div class="card-header" data-wtype="launcher">' + getHeaderTitle("launcher") + '</div>' +
                     '<div class="card-value">' + w.label + '</div>';
                 applyCardDimensions(card, w);
                 

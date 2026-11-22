@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / PyInstaller
+build/
+dist/
+*.spec
+*.exe
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Backup & temporary files
+*.backup.*
+*.bak
+*.tmp
+*.log
+
+# User local configs
+cult_config.json
+cult_media/
+
+# Local documentation & context
+GEMINI.md
+
+# IDE / Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
